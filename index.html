@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тест</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.151.3/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.151.3/examples/jsm/",
+                "mindar-face-three": "https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-face-three.prod.js"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="ar-container"></div>
+    <button id="backButton">Назад</button>
+
+    <div id="quiz-panel">
+        <div class="progress-bar-container">
+            <div class="progress-bar-fill" id="progressBarFill"></div>
+        </div>
+        <div class="progress" id="progress"></div>
+        <div class="question" id="questionText"></div>
+        <div id="mic-container"></div>
+        <div class="wheel" id="wheel">
+            <div class="sector sector1" data-index="0"><span></span></div>
+            <div class="sector sector2" data-index="1"><span></span></div>
+            <div class="sector sector3" data-index="2"><span></span></div>
+            <div class="sector sector4" data-index="3"><span></span></div>
+        </div>
+        <div id="result">
+            <div id="resultText"></div>
+            <button id="restartBtn">Пройти ще раз</button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
